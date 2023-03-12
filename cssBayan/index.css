@@ -8,7 +8,7 @@
 
 body {
   max-width: 100vw;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   margin: 0;
   text-decoration: none;
   min-height: 100vh;
@@ -20,14 +20,15 @@ body {
 }
 
 .header__image {
-  width: 10rem;
-  height: 10rem;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
 }
 
 .header__title {
-  font-size: 2rem;
   margin: 0;
   padding: 1em 0 0.5em;
+  font-size: 2rem;
 }
 
 .container {
@@ -43,6 +44,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
 }
 
 .button {
@@ -94,7 +96,7 @@ body {
 .subtitle {
   color: black;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.6vw;
 }
  
 .container:not(:hover) .item:not(:target) .subtitle {
@@ -103,4 +105,37 @@ body {
 
 .item:active .subtitle {
   color: blue;
+}
+
+.item:active {
+  opacity: 0.7;
+}
+
+.item:active .close__icon {
+  filter: invert(8%) sepia(92%) saturate(7469%) hue-rotate(248deg) brightness(97%) contrast(143%);
+}
+
+
+@media (max-width: 52em) {
+  .subtitle {
+    font-size: 3vw;
+  }
+
+  .img {
+    max-width: 50vw;
+  }
+
+  .header__image {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .header__title {
+    font-size: 1.8rem;
+  }
+
+  .close__icon {
+    width: 1.4em;
+    height: 1.4em;
+}
 }
