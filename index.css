@@ -15,11 +15,17 @@ body {
 }
 
 .header {
-  margin: 0 2em;
+  display: flex;
+  align-items: center;
+}
+
+.header__image {
+  width: 10rem;
+  height: 10rem;
 }
 
 .header__title {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
   padding: 1em 0 0.5em;
 }
@@ -82,12 +88,13 @@ body {
 
 .item:target .button {
   transform: rotate(45deg);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .subtitle {
   color: black;
   font-weight: 600;
+  font-size: 1.4rem;
 }
  
 .container:not(:hover) .item:not(:target) .subtitle {
